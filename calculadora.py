@@ -1,19 +1,20 @@
-# Addition function
-def add(a, b):
-    return a + b
+class Calculadora:
+    def divide(self, x, y):
+        if y == 0:
+            raise ZeroDivisionError("Cannot divide by zero.")
+        return x / y
 
-# Subtraction function
-def subtract(a, b):
-    return a - b
+    def multiply(self, x, y):
+        if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+            raise TypeError("Operands must be numbers.")
+        return x * y
 
-# Multiplication function
-def multiply(a, b):
-    return a * b
+    def sum(self, x, y):
+        if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+            raise TypeError("Operands must be numbers.")
+        return x + y
 
-# Division function
-def divide(a, b):
-    if b == 0:
-        return "Cannot divide by zero"
-    else:
-        return a / b
-    
+    def subtract(self, x, y):
+        if not isinstance(x, (int, float)) or not isinstance(y, (int, float)):
+            raise TypeError("Operands must be numbers.")
+        return x - y
